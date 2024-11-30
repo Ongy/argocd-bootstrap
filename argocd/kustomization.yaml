@@ -7,6 +7,7 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
 - project.yaml
 - app.yaml
+- route.yaml
 
 patches:
   - patch: |-
