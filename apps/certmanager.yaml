@@ -51,6 +51,11 @@ spec:
                   matchExpressions:
                   - key: node-role.kubernetes.io/control-plane
                     operator: Exists
+        startupapicheck:
+          tolerations:
+          - key: "node-role.kubernetes.io/control-plane"
+            operator: "Exists"
+            effect: "NoSchedule"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: cert-manager
