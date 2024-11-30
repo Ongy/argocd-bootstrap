@@ -5,16 +5,12 @@ metadata:
 spec:
   gatewayClassName: cilium
   listeners:
-  - allowedRoutes:
-      namespaces:
-        from: All
-    name: http
+  - name: http
     port: 80
     protocol: HTTP
   - name: https-1
     protocol: HTTPS
     port: 443
-    hostname: "*"
     tls:
       certificateRefs:
       - kind: Secret
