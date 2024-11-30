@@ -22,7 +22,7 @@ spec:
             preferredDuringSchedulingIgnoredDuringExecution:
             - weight: 1
               preference:
-              - matchExpressions:
+                matchExpressions:
                 - key: node-role.kubernetes.io/control-plane
                   operator: Exists
   destination:
