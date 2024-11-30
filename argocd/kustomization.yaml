@@ -24,3 +24,10 @@ patches:
     target:
       kind: (StatefulSet|Deployment|Job)
 
+configMapGenerator:
+- name: argocd-cmd-params-cm
+  behavior: merge
+  literals:
+  - server.insecure=true
+
+
