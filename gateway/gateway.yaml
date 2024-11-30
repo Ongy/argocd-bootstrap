@@ -8,9 +8,9 @@ spec:
   - name: http
     port: 80
     protocol: HTTP
-  - name: https-1
-    protocol: HTTPS
+  - name: https
     port: 443
+    protocol: HTTPS
     tls:
       certificateRefs:
       - kind: Secret
