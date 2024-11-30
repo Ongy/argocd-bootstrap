@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gatewayapi
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Ongy/argocd-bootstrap.git
+    path: gatewayapi
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - PruneLast=true
