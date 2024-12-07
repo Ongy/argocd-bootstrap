@@ -25,7 +25,7 @@ patches:
       kind: (StatefulSet|Deployment|Job)
   - patch: |-
       - op: add
-        path: /metadata/annotations/external-dns.alpha.kubernetes.io/hostname
+        path: .metadata.annotations['external-dns.alpha.kubernetes.io/hostname']
         value: argcd-new.local.ongy.net
     target:
       kind: Service
