@@ -8,6 +8,7 @@ spec:
     namespace: kube-system
   hostnames:
   - "argocd.local.ongy.net"
+  - "argocd-new.local.ongy.net"
   rules:
   - backendRefs:
     - name: argocd-server
