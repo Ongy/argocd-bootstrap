@@ -23,13 +23,6 @@ patches:
               effect: "NoSchedule"
     target:
       kind: (StatefulSet|Deployment|Job)
-  - patch: |-
-      - op: add
-        path: .metadata.annotations['external-dns.alpha.kubernetes.io/hostname']
-        value: argcd-new.local.ongy.net
-    target:
-      kind: Service
-      name: argocd-server
 
 configMapGenerator:
 - name: argocd-cmd-params-cm
