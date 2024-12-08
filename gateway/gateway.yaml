@@ -2,6 +2,8 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
   name: gateway
+  annotations:
+    external-dns.alpha.kubernetes.io/target: kubernetes.local.ongy.net
 spec:
   gatewayClassName: cilium
   listeners:
