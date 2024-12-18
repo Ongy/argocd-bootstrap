@@ -29,5 +29,12 @@ configMapGenerator:
   behavior: merge
   literals:
   - server.insecure=true
+- name: argocd-cm
+  behavior: merge
+  literals:
+  - url=https://argocd-new.local.ongy.net
+  files:
+  - resource.exclusions=cilium-exclusions
+  - oidc.config=oidc-config
 
 
