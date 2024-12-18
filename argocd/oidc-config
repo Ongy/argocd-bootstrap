@@ -2,5 +2,7 @@ name: Keycloak
 clientID: argocd
 clientSecret: UZ6RGV3ZCPDUfKfyYLI7kSIS2G6xYt4a
 issuer: https://keycloak.local.ongy.net/realms/local.ongy.net
+requestedScopes: ["email"]
+
 
 skipAudienceCheckWhenTokenHasNoAudience: true
