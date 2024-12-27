@@ -16,6 +16,5 @@ spec:
     name: Users
     policies:
     - p, proj:default:Users, applications, *, default/*, allow
-    - p, proj:default:Users, repositories, *, default/*, allow
   sourceRepos:
   - '*'
