@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: argo-workflows
+  name: argocd
   labels:
     ongy.net/keycloak-application-type: group
     ongy.net/keycloak-application: "true"
