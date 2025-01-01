@@ -8,6 +8,7 @@ resources:
 - project.yaml
 - app.yaml
 - route.yaml
+- oauth.yaml
 
 patches:
   - patch: |-
@@ -32,7 +33,7 @@ configMapGenerator:
 - name: argocd-cm
   behavior: merge
   literals:
-  - url=https://argocd-new.local.ongy.net
+  - url=https://argocd.local.ongy.net
   files:
   - resource.exclusions=cilium-exclusions
   - oidc.config=oidc-config
