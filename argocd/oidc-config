@@ -1,5 +1,5 @@
 name: Keycloak
-clientID: $keycloak-client-argocd:client_id
+clientID: argocd
 clientSecret: $keycloak-client-argocd:client_secret
 issuer: https://keycloak.local.ongy.net/realms/local.ongy.net
 
