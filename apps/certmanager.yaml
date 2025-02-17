@@ -16,49 +16,6 @@ spec:
         - --dns01-recursive-nameservers-only
         crds:
           enabled: true
-        tolerations:
-        - key: "node-role.kubernetes.io/control-plane"
-          operator: "Exists"
-          effect: "NoSchedule"
-        affinity:
-          nodeAffinity:
-            preferredDuringSchedulingIgnoredDuringExecution:
-            - weight: 1
-              preference:
-                matchExpressions:
-                - key: node-role.kubernetes.io/control-plane
-                  operator: Exists
-        webhook:
-          tolerations:
-          - key: "node-role.kubernetes.io/control-plane"
-            operator: "Exists"
-            effect: "NoSchedule"
-          affinity:
-            nodeAffinity:
-              preferredDuringSchedulingIgnoredDuringExecution:
-              - weight: 1
-                preference:
-                  matchExpressions:
-                  - key: node-role.kubernetes.io/control-plane
-                    operator: Exists
-        cainjector:
-          tolerations:
-          - key: "node-role.kubernetes.io/control-plane"
-            operator: "Exists"
-            effect: "NoSchedule"
-          affinity:
-            nodeAffinity:
-              preferredDuringSchedulingIgnoredDuringExecution:
-              - weight: 1
-                preference:
-                  matchExpressions:
-                  - key: node-role.kubernetes.io/control-plane
-                    operator: Exists
-        startupapicheck:
-          tolerations:
-          - key: "node-role.kubernetes.io/control-plane"
-            operator: "Exists"
-            effect: "NoSchedule"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: cert-manager
