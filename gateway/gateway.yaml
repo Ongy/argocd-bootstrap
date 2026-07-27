@@ -16,6 +16,12 @@ spec:
   - allowedRoutes:
       namespaces:
         from: All
+    name: ssh-alt
+    port: 7022
+    protocol: TCP
+  - allowedRoutes:
+      namespaces:
+        from: All
     name: https
     port: 443
     protocol: HTTPS
