@@ -29,5 +29,11 @@ spec:
       certificateRefs:
       - kind: Secret
         name: local-ca
+  - allowedRoutes:
+      namespaces:
+        from: All
+    name: tls
+    port: 443
+    protocol: TLS
 
 
